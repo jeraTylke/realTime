@@ -1,0 +1,18 @@
+{
+  "name": "realtime",
+  "version": "1.0.0",
+  "description": "Drawing in real time",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "draw"
+  ],
+  "author": "Jeralise Tylke",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  }
+}
