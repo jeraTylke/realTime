@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="main.css">
+  <title>Drawing</title>
+</head>
+
+<body>
+  <!-- <div class="mainContainter">
+
+    <input type="text" placeholder="Your guess">
+    <div class="message">
+
+      <button type="button" class= "btn" name="submit">Submit</button>
+    </div>
+
+  </div> -->
+
+  <div class="drawingSelectStatus">
+    You are the Drawer!, draw something, people will try to name it later and they you'll get to select the best name from all of the submissions.
+  </div>
+
+  <div class="drawingName">
+
+  </div>
+
+  <div class="responses">
+    <ul>
+
+    </ul>
+  </div>
+
+  <div class="nameDrawing">
+    <input class="textEntry" type="text" name="" value="" placeholder="what is it?">
+    <input class="textSubmitButton" type="button" name="" value="Submit Text">
+  </div>
+
+
+  <!-- <div class="clear">
+    clear!
+  </div> -->
+
+  <canvas id="drawing"></canvas>
+  <script>
+    let cx = document.querySelector("canvas").getContext("2d");
+    cx.strokeStyle = "blue";
+    cx.strokeRect(5, 5, 50, 50);
+    cx.lineWidth = 5;
+    cx.strokeRect(135, 5, 50, 50);
+  </script>
+
+
+
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+<script src="frontend.js" charset="utf-8"></script>
+
+</html>
