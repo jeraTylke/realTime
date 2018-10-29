@@ -77,6 +77,7 @@ function gameTiming(){
         console.log('text feedback done, enable drawer selection')
           io.emit('drawerTextSelectionDisplay', textResponses)
           console.log(textResponses);
+          //selection done, answer is chosen.
       setTimeout(function(){
               console.log('selection done, show results')
               //we dont really need to do anything here,but the space might be nice for a buffer or another kind of interaction...
@@ -85,28 +86,10 @@ function gameTiming(){
             //reset everyones status
             io.emit('drawingSelect', false) //reset everyone to not drawing
             textResponses = [] //clear the text entries
-            io.emit('clearClient', '') //clear the drawing
+            io.emit('clearClient', 'clearing client') //clear the drawing
             gameTiming();
-        },20000)
-      },20000)
-    }, 20000)
+        },10000)
+      },10000)
+    }, 10000)
   }, 10000)
 }
-
-// setTimeout(function(){
-//
-// },30000)
-
-// let totalTime = 60;
-// let timeFrame = 60;
-//
-// let gameTimer = setInterval(function(){
-//   totalTime -- //tick down the timer.
-//
-//   if(totalTime < timeFrame ){
-//     //timer is up.
-//     //game is over,
-//
-//   }
-//
-// }, 1000)

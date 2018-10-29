@@ -28,6 +28,9 @@ document.addEventListener("DOMContentLoaded", function() {
       if(isDrawing == true){
         $('.drawingSelectStatus').show();
       }
+      if(isDrawing == false){
+        $('.spectatorSelectStatus').show();
+      }
 
    })
 
@@ -39,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
    })
 
    socket.on('drawerTextSelectionDisplay',function(textResponses){
-
+     //drawer
      if(isDrawing == true){
        //show the responses
        isDrawing = false //turns off drawing capability. (this is maybe in the wrong place)
@@ -67,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
      }
    })
-
+    //drawers top pick
    socket.on('finalDrawingName', function(name){
      $('.drawingName').text(name)
      $('.drawingName').fadeIn();
@@ -86,12 +89,16 @@ document.addEventListener("DOMContentLoaded", function() {
       $('.drawingName').fadeOut(); //stop showing the final drawing name.
       $('.responses').html('<ul></ul>') //clear the responses
       $('.drawingSelectStatus').hide();
+      $('.spectatorSelectStatus').hide();
 
    })
 
+
+//drawing mechanics
+
    // set canvas to full browser width/height
-   canvas.width = width;
-   canvas.height = height;
+   canvas.width = width/2;
+   canvas.height = height/2;
 
    // register mouse event handlers
    canvas.onmousedown = function(e){ mouse.click = true; };
